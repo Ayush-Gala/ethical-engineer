@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { format } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import { getBlogPostBySlug, getAllBlogSlugs } from '@/lib/blog';
@@ -18,7 +19,8 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(await params.slug);
+  const resolvedParams = await params;
+  const post = getBlogPostBySlug(resolvedParams.slug);
 
   if (!post) {
     notFound();
@@ -26,6 +28,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <article className="max-w-4xl mx-auto">
+      {/* Back Button */}
+      <div className="mb-4">
+        <Link 
+          href="/" 
+          className="inline-flex items-center px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors group w-fit"
+          aria-label="Back to blog list"
+        >
+          <svg 
+            className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform flex-shrink-0" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Back to Blogs</span>
+        </Link>
+      </div>
+
       {/* Header */}
       <header className="mb-8">
         <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden mb-6">
