@@ -16,20 +16,22 @@ export default function About() {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           {/* Profile Picture */}
           <div className="flex-shrink-0">
-                      <div className="relative w-48 h-48 rounded-full overflow-hidden bg-gray-200">
-            <Image
-              src="/images/profile-placeholder.jpg"
-              alt="Profile Picture"
-              fill
-              className="object-cover"
-            />
-            {/* Fallback placeholder if image fails to load */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
-              <svg className="w-24 h-24 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-              </svg>
+            <div className="relative w-48 h-48 rounded-full overflow-hidden bg-gray-200">
+              <Image
+                src="/images/profile_placeholder.jpeg"
+                alt="Profile Picture"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 192px"
+              />
+              {/* Fallback placeholder if image fails to load */}
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-300 opacity-0 hover:opacity-100 transition-opacity">
+                <svg className="w-24 h-24 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+              </div>
             </div>
-          </div>
           </div>
 
           {/* Bio Content */}
@@ -60,7 +62,7 @@ export default function About() {
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/Ayush-Gala"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-colors"
@@ -72,7 +74,7 @@ export default function About() {
               </a>
               
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/ayush-gala"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-colors"
@@ -84,7 +86,7 @@ export default function About() {
               </a>
               
               <a
-                href="mailto:hello@ethicalengineer.com"
+                href="mailto:ayushgala2@gmail.com"
                 className="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Email"
               >

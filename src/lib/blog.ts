@@ -33,7 +33,7 @@ export function getAllBlogPosts(): BlogPost[] {
         title: matterResult.data.title || 'Untitled',
         description: matterResult.data.description || '',
         date: matterResult.data.date || new Date().toISOString(),
-        thumbnail: matterResult.data.thumbnail || '/images/default-thumbnail.jpg',
+        thumbnail: matterResult.data.thumbnail || '/images/default-thumbnail.png',
         content: matterResult.content,
       };
     });
@@ -53,7 +53,7 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
       title: matterResult.data.title || 'Untitled',
       description: matterResult.data.description || '',
       date: matterResult.data.date || new Date().toISOString(),
-      thumbnail: matterResult.data.thumbnail || '/images/default-thumbnail.jpg',
+      thumbnail: matterResult.data.thumbnail || '/images/default-thumbnail.png',
       content: matterResult.content,
     };
   } catch (error) {

@@ -2,7 +2,7 @@
 title: "Building Ethical AI Systems: A Developer's Guide"
 description: "Exploring the principles and practices for developing AI systems that are fair, transparent, and beneficial to society."
 date: "2024-01-15"
-thumbnail: "/images/ai-ethics.jpg"
+thumbnail: "/images/ai-ethics.png"
 ---
 
 # Building Ethical AI Systems: A Developer's Guide
