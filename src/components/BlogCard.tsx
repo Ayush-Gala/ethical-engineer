@@ -10,7 +10,7 @@ interface BlogCardProps {
 export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/blog/${post.slug}`} className="group">
-      <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+      <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700">
         <div className="relative h-48 w-full">
           <Image
             src={post.thumbnail}
@@ -20,13 +20,13 @@ export default function BlogCard({ post }: BlogCardProps) {
           />
         </div>
         <div className="p-6">
-          <div className="text-sm text-gray-500 mb-2">
+          <div className="text-sm text-gray-500 dark:text-gray-400 mb-2 transition-colors duration-200">
             {format(new Date(post.date), 'MMMM dd, yyyy')}
           </div>
-          <h2 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
             {post.title}
           </h2>
-          <p className="text-gray-600 overflow-hidden" style={{
+          <p className="text-gray-600 dark:text-gray-300 overflow-hidden transition-colors duration-200" style={{
             display: '-webkit-box',
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical'

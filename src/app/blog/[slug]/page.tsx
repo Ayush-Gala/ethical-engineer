@@ -6,9 +6,9 @@ import ReactMarkdown from 'react-markdown';
 import { getBlogPostBySlug, getAllBlogSlugs } from '@/lib/blog';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -32,7 +32,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="mb-4">
         <Link 
           href="/" 
-          className="inline-flex items-center px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors group w-fit"
+          className="inline-flex items-center px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 group w-fit"
           aria-label="Back to blog list"
         >
           <svg 
@@ -59,18 +59,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
         
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
             {post.title}
           </h1>
-          <div className="text-gray-500 text-lg">
+          <div className="text-gray-500 dark:text-gray-400 text-lg transition-colors duration-200">
             {format(new Date(post.date), 'MMMM dd, yyyy')}
           </div>
         </div>
       </header>
 
       {/* Content */}
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <div className="prose prose-lg prose-gray max-w-none">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-200">
+        <div className="max-w-none">
           <ReactMarkdown
             components={{
               // Custom styling for markdown elements

@@ -6,13 +6,13 @@ export default function About() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">About Me</h1>
-        <p className="text-xl text-gray-600">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">About Me</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300 transition-colors duration-200">
           Passionate about ethical engineering and responsible technology development
         </p>
       </div>
 
-      <div className="bg-white rounded-lg shadow-md p-8">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-200">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           {/* Profile Picture */}
           <div className="flex-shrink-0">
@@ -36,26 +36,25 @@ export default function About() {
 
           {/* Bio Content */}
           <div className="flex-1">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
               The Ethical Engineer
             </h2>
             
-            <div className="prose prose-gray max-w-none">
-              <p className="text-lg text-gray-700 mb-6">
-                I'm a software engineer with a deep commitment to building technology that serves humanity ethically and responsibly. 
-                With years of experience in software development, I've learned that the most successful projects are those that 
-                prioritize both technical excellence and ethical considerations.
+            <div className="max-w-none">
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                Hi, I&apos;m Ayush Gala, a passionate software engineer and writer focused on building ethical, impactful technology. I believe in using code for good and sharing knowledge to empower others.
               </p>
               
-              <p className="text-lg text-gray-700 mb-6">
-                My work focuses on creating systems that are not only efficient and scalable, but also fair, transparent, 
-                and beneficial to all stakeholders. I believe that engineers have a responsibility to consider the broader 
-                impact of their work on society, and I'm passionate about sharing these insights through writing and speaking.
+              <p className="mb-4 text-gray-700 dark:text-gray-300">
+                I&apos;ve worked on projects ranging from AI research to open-source tools, always with a focus on transparency, privacy, and social responsibility.
               </p>
               
-              <p className="text-lg text-gray-700 mb-8">
-                When I'm not coding or writing, you can find me exploring the latest developments in AI ethics, 
-                participating in open source projects, or mentoring the next generation of ethical engineers.
+              <p className="mb-4 text-gray-700 dark:text-gray-300">
+                When I&apos;m not coding or writing, you can find me exploring the latest developments in AI ethics, hiking, or playing chess.
+              </p>
+              
+              <p className="mb-4 text-gray-700 dark:text-gray-300">
+                Let&apos;s connect and build a better digital future together!
               </p>
             </div>
 
@@ -65,7 +64,7 @@ export default function About() {
                 href="https://github.com/Ayush-Gala"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -77,7 +76,7 @@ export default function About() {
                 href="https://linkedin.com/in/ayush-gala"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -87,7 +86,7 @@ export default function About() {
               
               <a
                 href="mailto:ayushgala2@gmail.com"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
