@@ -79,6 +79,23 @@ body {
   border-color: var(--border-color) !important;
 }
 
+/* Hover state overrides */
+.hover\:text-gray-900:hover {
+  color: var(--text-primary) !important;
+}
+
+.dark\:hover\:text-white:hover {
+  color: var(--text-primary) !important;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark\:hover\:bg-gray-700:hover {
+  background-color: var(--bg-secondary) !important;
+}
+
 /* Navbar specific */
 nav {
   background-color: var(--nav-bg) !important;
