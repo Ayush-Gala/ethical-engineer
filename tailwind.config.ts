@@ -6,27 +6,11 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
-    extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: 'none',
-            color: '#374151',
-            a: {
-              color: '#2563eb',
-              '&:hover': {
-                color: '#1d4ed8',
-              },
-            },
-          },
-        },
-      },
-    },
+    extend: {},
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [],
 };
 
 export default config; 

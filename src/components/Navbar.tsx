@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
+import { useTheme } from '@/contexts/ThemeContext';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const { theme } = useTheme(); // Removed unused variable
 
   const handleResumeClick = () => {
     // Open resume in new tab
@@ -12,35 +15,42 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b">
+    <nav className="shadow-sm border-b transition-colors duration-200" style={{
+      backgroundColor: 'var(--nav-bg)',
+      borderColor: 'var(--nav-border)'
+    }}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Site Title */}
-          <Link href="/" className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
+          <Link href="/" className="text-xl font-bold transition-colors" style={{
+            color: 'var(--text-primary)'
+          }}>
             The Ethical Engineer
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/about" className="transition-colors" style={{ color: 'var(--text-secondary)' }}>
               About Me
             </Link>
             <button
               onClick={handleResumeClick}
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="transition-colors" style={{ color: 'var(--text-secondary)' }}
             >
               Resume
             </button>
-            <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link href="/" className="transition-colors" style={{ color: 'var(--text-secondary)' }}>
               Blog
             </Link>
+            <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and theme toggle */}
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -56,10 +66,10 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
               <Link
                 href="/about"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Me
@@ -69,13 +79,13 @@ export default function Navbar() {
                   handleResumeClick();
                   setIsMenuOpen(false);
                 }}
-                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 Resume
               </button>
               <Link
                 href="/"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog

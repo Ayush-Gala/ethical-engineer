@@ -56,7 +56,7 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
       thumbnail: matterResult.data.thumbnail || '/images/default-thumbnail.png',
       content: matterResult.content,
     };
-  } catch (error) {
+  } catch {
     return null;
   }
 }
