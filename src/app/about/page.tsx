@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap, FaCode, FaServer, FaCloud, FaCogs, FaBrain, FaGamepad, FaMicrochip, FaGlobe, FaQuoteLeft, FaAws } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap, FaCode, FaServer, FaCloud, FaBrain, FaGamepad, FaMicrochip, FaGlobe, FaQuoteLeft, FaAws } from "react-icons/fa";
 import { SiCplusplus, SiGo, SiPython, SiRust, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiDocker, SiKubernetes, SiTensorflow, SiPytorch, SiUnity, SiBlender, SiFigma, SiArduino, SiRaspberrypi } from "react-icons/si";
 
 export default function About() {
@@ -13,7 +13,7 @@ export default function About() {
           Engineering for Impact.
         </h1>
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-4">
-          Hi! I'm Ayush Gala, a computer scientist on a quest to build robust, ethical, and sustainable technology that empowers people and communities.
+          Hi! I&apos;m Ayush Gala, a computer scientist on a quest to build robust, ethical, and sustainable technology that empowers people and communities.
         </p>
       </div>
 
@@ -37,14 +37,14 @@ export default function About() {
           <div className="flex items-center gap-2 mb-2">
             <FaQuoteLeft className="text-blue-500 dark:text-blue-400 text-xl" />
             <span className="text-gray-800 dark:text-gray-200 text-lg font-medium">
-              "Technology is most powerful when it is responsible, sustainable, and accessible."
+              &ldquo;Technology is most powerful when it is responsible, sustainable, and accessible.&rdquo;
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
             My journey began with a curiosity for how things work and a drive to solve real-world problems. Today, I focus on building scalable, efficient, and reliable software systems. My curiosity lies at the intersection of software engineering, AI, and sustainable computing. I believe that maintainable infrastructure and thoughtful design can reduce energy use, drive long-term value, and create a positive impact.
           </p>
           <p className="text-gray-700 dark:text-gray-300">
-            I'm passionate about distributed systems, high-performance computing, and backend development. My goal is to engineer solutions that are robust, ethical, and future-ready. I'm always learning, always building.
+            I&apos;m passionate about distributed systems, high-performance computing, and backend development. My goal is to engineer solutions that are robust, ethical, and future-ready. I&apos;m always learning, always building.
           </p>
         </div>
       </div>
