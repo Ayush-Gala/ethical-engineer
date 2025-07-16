@@ -1,95 +1,186 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
+import { FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap, FaCode, FaServer, FaCloud, FaCogs, FaBrain, FaGamepad, FaMicrochip, FaGlobe, FaQuoteLeft, FaAws } from "react-icons/fa";
+import { SiCplusplus, SiGo, SiPython, SiRust, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiDocker, SiKubernetes, SiTensorflow, SiPytorch, SiUnity, SiBlender, SiFigma, SiArduino, SiRaspberrypi } from "react-icons/si";
 
 export default function About() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">About Me</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 transition-colors duration-200">
-          Passionate about ethical engineering and responsible technology development
+    <div className="max-w-5xl mx-auto px-4 py-8">
+      {/* Banner / Mission Statement */}
+      <div className="text-center mb-10">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
+          Engineering for Impact.
+        </h1>
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-4">
+          Hi! I'm Ayush Gala, a computer scientist on a quest to build robust, ethical, and sustainable technology that empowers people and communities.
         </p>
       </div>
 
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-200">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-          {/* Profile Picture */}
-          <div className="flex-shrink-0">
-            <div className="relative w-48 h-48 rounded-full overflow-hidden bg-gray-200">
-              <Image
-                src="/images/profile_placeholder.jpeg"
-                alt="Profile Picture"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 192px"
-              />
+      {/* Profile & Journey */}
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
+        {/* Profile Picture */}
+        <div className="flex-shrink-0">
+          <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700 border-4 border-blue-400 dark:border-blue-600 shadow-lg mx-auto md:mx-0">
+            <Image
+              src="/images/profile_placeholder.jpeg"
+              alt="Profile Picture"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 192px"
+            />
+          </div>
+        </div>
+        {/* Journey & Mission */}
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-2">
+            <FaQuoteLeft className="text-blue-500 dark:text-blue-400 text-xl" />
+            <span className="text-gray-800 dark:text-gray-200 text-lg font-medium">
+              "Technology is most powerful when it is responsible, sustainable, and accessible."
+            </span>
+          </div>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
+            My journey began with a curiosity for how things work and a drive to solve real-world problems. Today, I focus on building scalable, efficient, and reliable software systems. My curiosity lies at the intersection of software engineering, AI, and sustainable computing. I believe that maintainable infrastructure and thoughtful design can reduce energy use, drive long-term value, and create a positive impact.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300">
+            I'm passionate about distributed systems, high-performance computing, and backend development. My goal is to engineer solutions that are robust, ethical, and future-ready. I'm always learning, always building.
+          </p>
+        </div>
+      </div>
+
+      {/* Education */}
+      <div className="mb-10">
+        <h2 className="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <FaGraduationCap className="text-blue-500 dark:text-blue-400" /> Education
+        </h2>
+        <div className="space-y-4">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+              <div>
+                <span className="font-semibold text-lg text-gray-900 dark:text-white">NC State University</span>
+                <span className="ml-2 text-blue-600 dark:text-blue-400 font-medium">(MS, Computer Science, 2024–2026)</span>
+                <span className="ml-2 text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-0.5 rounded">GPA: 4.0</span>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">Top 1%/5% in Graduate Division</div>
+            </div>
+            <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
+              <span className="font-medium">Relevant Courses:</span> Parallel Systems, Architecture of Parallel Computers, Software Engineering, Operating Systems, Automated Learning & Data Analysis, Neural Networks
             </div>
           </div>
-
-          {/* Bio Content */}
-          <div className="flex-1">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
-              The Ethical Engineer
-            </h2>
-            
-            <div className="max-w-none">
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Hi, I&apos;m Ayush Gala, a passionate software engineer and writer focused on building ethical, impactful technology. I believe in using code for good and sharing knowledge to empower others.
-              </p>
-              
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                I&apos;ve worked on projects ranging from AI research to open-source tools, always with a focus on transparency, privacy, and social responsibility.
-              </p>
-              
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                When I&apos;m not coding or writing, you can find me exploring the latest developments in AI ethics, hiking, or playing chess.
-              </p>
-              
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                Let&apos;s connect and build a better digital future together!
-              </p>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+              <div>
+                <span className="font-semibold text-lg text-gray-900 dark:text-white">Pune University (PICT)</span>
+                <span className="ml-2 text-blue-600 dark:text-blue-400 font-medium">(BE, Computer Engineering, 2020–2024)</span>
+                <span className="ml-2 text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 px-2 py-0.5 rounded">GPA: 3.75</span>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">Honors: AI & ML</div>
             </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/Ayush-Gala"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-                aria-label="GitHub"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-              </a>
-              
-              <a
-                href="https://linkedin.com/in/ayush-gala"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-                aria-label="LinkedIn"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              
-              <a
-                href="mailto:ayushgala2@gmail.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-                aria-label="Email"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </a>
+            <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
+              <span className="font-medium">Activities:</span> Pictoreal, ACM Student Chapter, Debate Society, GameDevUtopia, TEDxPICT
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Tech Stack */}
+      <div className="mb-10">
+        <h2 className="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <FaCode className="text-blue-500 dark:text-blue-400" /> Tech Stack
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
+            <FaServer className="text-2xl text-blue-500 dark:text-blue-400 mb-1" />
+            <span className="font-semibold text-gray-900 dark:text-white">Systems & HPC</span>
+            <div className="flex flex-wrap gap-2 mt-2 text-lg">
+              <SiCplusplus title="C/C++" /> <SiGo title="Go" /> <SiRust title="Rust" /> <SiPython title="Python" />
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">CUDA, MPI, OpenMP, Slurm</div>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
+            <FaCloud className="text-2xl text-blue-500 dark:text-blue-400 mb-1" />
+            <span className="font-semibold text-gray-900 dark:text-white">Web & DevOps</span>
+            <div className="flex flex-wrap gap-2 mt-2 text-lg">
+              <SiJavascript title="JavaScript" /> <SiTypescript title="TypeScript" /> <SiReact title="React" /> <SiNextdotjs title="Next.js" /> <SiDocker title="Docker" /> <SiKubernetes title="Kubernetes" /> <FaAws title="AWS" />
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Linux, Git, Jenkins</div>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
+            <FaBrain className="text-2xl text-blue-500 dark:text-blue-400 mb-1" />
+            <span className="font-semibold text-gray-900 dark:text-white">AI / ML</span>
+            <div className="flex flex-wrap gap-2 mt-2 text-lg">
+              <SiTensorflow title="TensorFlow" /> <SiPytorch title="PyTorch" />
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Keras, Scikit-learn, DeepFilterNet3</div>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
+            <FaGamepad className="text-2xl text-blue-500 dark:text-blue-400 mb-1" />
+            <span className="font-semibold text-gray-900 dark:text-white">Game Dev & Creative</span>
+            <div className="flex flex-wrap gap-2 mt-2 text-lg">
+              <SiUnity title="Unity" /> <SiBlender title="Blender" /> <SiFigma title="Figma" />
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Photoshop, LÖVE2D</div>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
+            <FaMicrochip className="text-2xl text-blue-500 dark:text-blue-400 mb-1" />
+            <span className="font-semibold text-gray-900 dark:text-white">IoT & Embedded</span>
+            <div className="flex flex-wrap gap-2 mt-2 text-lg">
+              <SiArduino title="Arduino" /> <SiRaspberrypi title="Raspberry Pi" />
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">ESP32, Embedded C, Python</div>
+          </div>
+        </div>
+      </div>
+
+
+      {/* Skills & Languages */}
+      <div className="mb-10">
+        <h2 className="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <FaGlobe className="text-blue-500 dark:text-blue-400" /> Skills & Languages
+        </h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <span className="font-semibold text-gray-900 dark:text-white">Programming & Design:</span>
+            <div className="text-gray-700 dark:text-gray-300 mt-2">
+              C, C++, Go, Python, Java, JavaScript, TypeScript, Lua, SQL, HTML/CSS, Embedded C, x86 Assembly<br />
+              Figma, Photoshop, Illustrator, Blender, Canva
+            </div>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <span className="font-semibold text-gray-900 dark:text-white">Languages & Communication:</span>
+            <div className="text-gray-700 dark:text-gray-300 mt-2">
+              English, Hindi, Marathi, Gujarati, French<br />
+              Public Speaking, Debates, Compeering, Panel Discussions
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact & Socials */}
+      <div className="mb-10 text-center">
+        <h2 className="flex items-center justify-center gap-2 text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <FaEnvelope className="text-blue-500 dark:text-blue-400" /> Let’s Connect
+        </h2>
+        <div className="flex justify-center gap-6 mb-2">
+          <a href="https://github.com/Ayush-Gala" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-3xl transition-colors duration-200">
+            <FaGithub />
+          </a>
+          <a href="https://linkedin.com/in/ayush-gala" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-white text-3xl transition-colors duration-200">
+            <FaLinkedin />
+          </a>
+          <a href="mailto:ayushgala2@gmail.com" aria-label="Email" className="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-white text-3xl transition-colors duration-200">
+            <FaEnvelope />
+          </a>
+        </div>
+        <div className="text-gray-600 dark:text-gray-400 text-sm">ayushgala2@gmail.com</div>
+      </div>
+
+      {/* Footer Quote */}
+      <div className="text-center mt-8">
+        <p className="italic text-lg text-gray-700 dark:text-gray-300">
+          Always building, always learning. Let’s talk systems, scale, and speed!
+        </p>
       </div>
     </div>
   );

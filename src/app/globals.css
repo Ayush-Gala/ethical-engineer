@@ -71,6 +71,10 @@ body {
   color: var(--text-primary) !important;
 }
 
+.text-gray-800 {
+  color: var(--text-primary) !important;
+}
+
 .border-gray-200 {
   border-color: var(--border-color) !important;
 }
