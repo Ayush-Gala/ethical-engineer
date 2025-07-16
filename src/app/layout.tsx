@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.png" type="image/png" sizes="32x32" />
+      </head>
       <body className={inter.className}>
         <ClientThemeProvider>
           <div className="min-h-screen transition-colors duration-200" style={{

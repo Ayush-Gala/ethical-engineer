@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,10 +22,20 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Site Title */}
-          <Link href="/" className="text-xl font-bold transition-colors" style={{
+          <Link href="/" className="flex items-center text-xl font-bold transition-colors gap-2" style={{
             color: 'var(--text-primary)'
           }}>
-            The Ethical Engineer
+            <span className="relative w-8 h-8">
+              <Image
+                src="/logo.png"
+                alt="The Ethical Engineer Logo"
+                fill
+                className="object-contain drop-shadow"
+                priority
+                sizes="32px"
+              />
+            </span>
+            <span>The Ethical Engineer</span>
           </Link>
 
           {/* Desktop Navigation */}
