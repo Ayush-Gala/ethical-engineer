@@ -11,7 +11,7 @@ export default function Home() {
           Welcome to The Ethical Engineer
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-200">
-          Exploring the intersection of technology, ethics, and engineering through thoughtful writing and practical insights.
+          Explore the intersection of technology, ethics, and engineering through thoughtful writing and practical insights.
         </p>
       </div>
 
