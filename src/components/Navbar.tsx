@@ -10,11 +10,6 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const { theme } = useTheme(); // Removed unused variable
 
-  const handleResumeClick = () => {
-    // Open resume in new tab
-    window.open('/resume.pdf', '_blank');
-  };
-
   return (
     <nav className="shadow-sm border-b transition-colors duration-200" style={{
       backgroundColor: 'var(--nav-bg)',
@@ -48,12 +43,6 @@ export default function Navbar() {
                 { label: 'About Me', href: '/about' }
               ]}
             />
-            <button
-              onClick={handleResumeClick}
-              className="transition-colors" style={{ color: 'var(--text-secondary)' }}
-            >
-              Resume
-            </button>
             <Link href="/" className="transition-colors" style={{ color: 'var(--text-secondary)' }}>
               Blog
             </Link>
@@ -91,15 +80,6 @@ export default function Navbar() {
                 variant="mobile"
                 onItemClick={() => setIsMenuOpen(false)}
               />
-              <button
-                onClick={() => {
-                  handleResumeClick();
-                  setIsMenuOpen(false);
-                }}
-                className="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                Resume
-              </button>
               <Link
                 href="/"
                 className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
