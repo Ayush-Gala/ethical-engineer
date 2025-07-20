@@ -62,7 +62,7 @@ export default function About() {
                 <span className="ml-2 text-blue-600 dark:text-blue-400 font-medium">(MS, Computer Science, 2024–2026)</span>
                 <span className="ml-2 text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-0.5 rounded">GPA: 4.0</span>
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">Top 1%/5% in Graduate Division</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">Top 1% in Graduate Division</div>
             </div>
             <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
               <span className="font-medium">Relevant Courses:</span> Parallel Systems, Architecture of Parallel Computers, Software Engineering, Operating Systems, Automated Learning & Data Analysis, Neural Networks

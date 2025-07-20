@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import Dropdown from './Dropdown';
-import MobileDropdown from './MobileDropdown';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -83,12 +82,13 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
-              <MobileDropdown
+              <Dropdown
                 label="About"
                 items={[
                   { label: 'About TEE', href: '/about-tee' },
                   { label: 'About Me', href: '/about' }
                 ]}
+                variant="mobile"
                 onItemClick={() => setIsMenuOpen(false)}
               />
               <button
