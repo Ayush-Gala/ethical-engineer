@@ -39,15 +39,15 @@ export default function AboutTEE() {
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
-            <h3 className="text-xl font-semibold text-red-800 dark:text-red-200 mb-3">Rising Technical Debt</h3>
-            <p className="text-red-700 dark:text-red-300">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Rising Technical Debt</h3>
+            <p className="text-gray-700 dark:text-red-300">
               Large software organizations are accumulating technical debt at an alarming rate, 
               leading to delayed timelines and compromised system reliability.
             </p>
           </div>
           <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
-            <h3 className="text-xl font-semibold text-red-800 dark:text-red-200 mb-3">Legacy Infrastructure Crisis</h3>
-            <p className="text-red-700 dark:text-red-300">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Legacy Infrastructure Crisis</h3>
+            <p className="text-gray-700 dark:text-red-300">
               Critical legacy systems are being neglected, creating vulnerabilities that could 
               lead to catastrophic failures in global software infrastructure.
             </p>
@@ -176,7 +176,7 @@ export default function AboutTEE() {
       {/* Footer Quote */}
       <div className="text-center mt-12">
         <blockquote className="text-xl italic text-gray-700 dark:text-gray-300">
-          &ldquo;The best code is not just functional—it&apos;s ethical, maintainable, and built with the future in mind.&rdquo;
+          &ldquo;The best code isn&apos;t just functional, it&apos;s ethical and built with the future in mind.&rdquo;
         </blockquote>
       </div>
     </div>
