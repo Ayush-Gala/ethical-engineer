@@ -3,16 +3,12 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
+import Dropdown from './Dropdown';
 import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const { theme } = useTheme(); // Removed unused variable
-
-  const handleResumeClick = () => {
-    // Open resume in new tab
-    window.open('/resume.pdf', '_blank');
-  };
 
   return (
     <nav className="shadow-sm border-b transition-colors duration-200" style={{
@@ -39,16 +35,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className="transition-colors" style={{ color: 'var(--text-secondary)' }}>
-              About Me
-            </Link>
-            <button
-              onClick={handleResumeClick}
-              className="transition-colors" style={{ color: 'var(--text-secondary)' }}
-            >
-              Resume
-            </button>
+          <div className="hidden md:flex items-center space-x-6">
+            <Dropdown
+              label="About"
+              items={[
+                { label: 'About TEE', href: '/about-tee' },
+                { label: 'About Me', href: '/about' }
+              ]}
+            />
             <Link href="/" className="transition-colors" style={{ color: 'var(--text-secondary)' }}>
               Blog
             </Link>
@@ -77,22 +71,15 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Me
-              </Link>
-              <button
-                onClick={() => {
-                  handleResumeClick();
-                  setIsMenuOpen(false);
-                }}
-                className="block w-full text-left px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                Resume
-              </button>
+              <Dropdown
+                label="About"
+                items={[
+                  { label: 'About TEE', href: '/about-tee' },
+                  { label: 'About Me', href: '/about' }
+                ]}
+                variant="mobile"
+                onItemClick={() => setIsMenuOpen(false)}
+              />
               <Link
                 href="/"
                 className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
