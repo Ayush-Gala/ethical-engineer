@@ -21,7 +21,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
         <div className="p-6">
           <div className="text-sm text-gray-500 dark:text-gray-400 mb-2 transition-colors duration-200">
-            {format(new Date(post.date), 'MMMM dd, yyyy')}
+            {format(new Date(post.date), 'MMM dd, yyyy')}
           </div>
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
             {post.title}
