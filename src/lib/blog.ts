@@ -4,6 +4,22 @@ import matter from 'gray-matter';
 
 const contentDirectory = path.join(process.cwd(), 'content/blog');
 
+// Function to calculate read time in minutes
+function calculateReadTime(content: string): number {
+  // Average reading speed: 200-250 words per minute
+  // Using 225 words per minute as a reasonable average
+  const wordsPerMinute = 225;
+  
+  // Count words in the content
+  const wordCount = content.trim().split(/\s+/).length;
+  
+  // Calculate read time in minutes
+  const readTimeMinutes = Math.ceil(wordCount / wordsPerMinute);
+  
+  // Return at least 1 minute
+  return Math.max(1, readTimeMinutes);
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -11,6 +27,7 @@ export interface BlogPost {
   date: string;
   thumbnail: string;
   content: string;
+  readTime: number;
 }
 
 export function getAllBlogPosts(): BlogPost[] {
@@ -35,6 +52,7 @@ export function getAllBlogPosts(): BlogPost[] {
         date: matterResult.data.date || new Date().toISOString(),
         thumbnail: matterResult.data.thumbnail || '/images/default-thumbnail.png',
         content: matterResult.content,
+        readTime: calculateReadTime(matterResult.content),
       };
     });
 
@@ -55,6 +73,7 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
       date: matterResult.data.date || new Date().toISOString(),
       thumbnail: matterResult.data.thumbnail || '/images/default-thumbnail.png',
       content: matterResult.content,
+      readTime: calculateReadTime(matterResult.content),
     };
   } catch {
     return null;
