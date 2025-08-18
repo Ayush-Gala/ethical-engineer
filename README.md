@@ -81,6 +81,8 @@ thumbnail: "/images/your-image.jpg"
 # Your content here...
 ```
 
+**Note**: The read time is automatically calculated based on the content length (using an average reading speed of 225 words per minute). No additional frontmatter field is required.
+
 2. The post will automatically appear on the homepage and be accessible at `/blog/your-filename`.
 
 ## 🎨 Customization

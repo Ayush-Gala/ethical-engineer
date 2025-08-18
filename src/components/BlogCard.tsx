@@ -20,8 +20,9 @@ export default function BlogCard({ post }: BlogCardProps) {
           />
         </div>
         <div className="p-6">
-          <div className="text-sm text-gray-500 dark:text-gray-400 mb-2 transition-colors duration-200">
-            {format(new Date(post.date), 'MMM dd, yyyy')}
+          <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 mb-2 transition-colors duration-200">
+            <span>{format(new Date(post.date), 'MMM dd, yyyy')}</span>
+            <span>{post.readTime} min read</span>
           </div>
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
             {post.title}

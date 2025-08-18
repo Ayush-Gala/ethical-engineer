@@ -62,8 +62,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
             {post.title}
           </h1>
-          <div className="text-gray-500 dark:text-gray-400 text-lg transition-colors duration-200">
-            {format(new Date(post.date), 'MMMM dd, yyyy')}
+          <div className="flex justify-between items-center text-gray-500 dark:text-gray-400 text-lg transition-colors duration-200">
+            <span>{format(new Date(post.date), 'MMMM dd, yyyy')}</span>
+            <span>{post.readTime} min read</span>
           </div>
         </div>
       </header>
