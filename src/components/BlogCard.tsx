@@ -15,7 +15,9 @@ export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/blog/${post.slug}`} className="group">
       <article 
-        className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-500 ease-in-out transform ${
+          isHovered ? 'shadow-xl scale-[1.02]' : 'shadow-md scale-100'
+        }`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -24,7 +26,9 @@ export default function BlogCard({ post }: BlogCardProps) {
             src={post.thumbnail}
             alt={post.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className={`object-cover transition-transform duration-500 ease-in-out ${
+              isHovered ? 'scale-105' : 'scale-100'
+            }`}
           />
         </div>
         <div className="p-6">
@@ -32,21 +36,27 @@ export default function BlogCard({ post }: BlogCardProps) {
             <span>{format(new Date(post.date), 'MMM dd, yyyy')}</span>
             <span>{post.readTime} min read</span>
           </div>
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+          <h2 className={`text-xl font-semibold mb-3 transition-all duration-500 ease-in-out ${
+            isHovered ? 'text-blue-600 dark:text-blue-400' : 'text-gray-900 dark:text-white'
+          }`}>
             {post.title}
           </h2>
-          <p 
-            className={`text-gray-600 dark:text-gray-300 overflow-hidden transition-all duration-300 ${
-              isHovered ? 'line-clamp-none' : 'line-clamp-2'
-            }`}
-            style={{
-              display: isHovered ? 'block' : '-webkit-box',
-              WebkitLineClamp: isHovered ? 'unset' : 2,
-              WebkitBoxOrient: isHovered ? 'unset' : 'vertical'
-            }}
-          >
-            {post.description}
-          </p>
+          <div className="relative overflow-hidden">
+            <p 
+              className={`text-gray-600 dark:text-gray-300 transition-all duration-500 ease-in-out ${
+                isHovered ? 'max-h-96 opacity-100' : 'max-h-12 opacity-90'
+              }`}
+              style={{
+                lineHeight: '1.5',
+                display: '-webkit-box',
+                WebkitLineClamp: isHovered ? 'unset' : 2,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden'
+              }}
+            >
+              {post.description}
+            </p>
+          </div>
         </div>
       </article>
     </Link>

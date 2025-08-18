@@ -119,19 +119,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 const isInline = !className;
                 if (isInline) {
                   return (
-                    <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-sm font-mono text-gray-800 dark:text-gray-200">
+                    <code className="px-2 py-1 rounded text-sm font-mono text-gray-800 dark:text-gray-200">
                       {children}
                     </code>
                   );
                 }
                 return (
-                  <code className="block bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-sm font-mono text-gray-800 dark:text-gray-200 overflow-x-auto">
+                  <code className="p-4 rounded-lg text-sm font-mono text-gray-800 dark:text-gray-200 overflow-x-auto">
                     {children}
                   </code>
                 );
               },
               pre: ({ children }) => (
-                <pre className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg overflow-x-auto mb-4">
+                <pre className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 overflow-x-auto mb-4">
                   {children}
                 </pre>
               ),
