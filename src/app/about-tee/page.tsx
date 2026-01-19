@@ -12,7 +12,7 @@ export default function AboutTEE() {
           About the ethical-engineering blog
         </h1>
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          A platform dedicated to preserving and promoting ethical software engineering principles in the age of AI
+          A platform dedicated to preserving and promoting ethical engineering principles in the age of AI
         </p>
       </div>
 
@@ -23,9 +23,9 @@ export default function AboutTEE() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-              With the rapid rise of AI and automation, we&apos;re witnessing a concerning trend: the erosion of fundamental software engineering principles. 
+              With the rapid rise of AI and automation, we&apos;re witnessing a concerning trend: the erosion of fundamental engineering principles. 
               The ethical-engineering blog exists to combat this by providing insights, case studies, and practical guidance that empowers developers to make 
-              better decisions when building software solutions for the world.
+              better decisions when building engineering solutions for the world.
             </p>
           </div>
         </div>

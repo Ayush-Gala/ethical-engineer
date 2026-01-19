@@ -15,7 +15,7 @@ export default function About() {
       {/* Banner / Mission Statement */}
       <div className="text-center mb-10">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-          Engineering for Impact.
+          Engineering for Scale.
         </h1>
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-4">
           Hi! I&apos;m Ayush Gala, a software engineer with a passion for building robust and ethical technology that empowers people and communities.

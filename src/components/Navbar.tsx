@@ -39,7 +39,7 @@ export default function Navbar() {
             <Dropdown
               label="About"
               items={[
-                { label: 'About TEE', href: '/about-tee' },
+                { label: 'About the blog', href: '/about-tee' },
                 { label: 'About Me', href: '/about' }
               ]}
             />
@@ -74,7 +74,7 @@ export default function Navbar() {
               <Dropdown
                 label="About"
                 items={[
-                  { label: 'About TEE', href: '/about-tee' },
+                  { label: 'About the blog', href: '/about-tee' },
                   { label: 'About Me', href: '/about' }
                 ]}
                 variant="mobile"
