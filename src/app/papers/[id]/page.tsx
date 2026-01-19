@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getPaperById, getAllPaperIds } from '@/lib/papers';
+import PdfViewer from '@/components/PdfViewer';
 
 interface PaperPageProps {
   params: Promise<{
@@ -85,13 +86,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
       </h1>
 
       {/* PDF Viewer */}
-      <div className="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 overflow-hidden">
-        <iframe
-          src={pdfUrl}
-          className="w-full h-full"
-          title={paper.title}
-        />
-      </div>
+      <PdfViewer pdfUrl={pdfUrl} title={paper.title} />
     </div>
   );
 }
