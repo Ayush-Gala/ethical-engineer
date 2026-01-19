@@ -24,14 +24,14 @@ export default function Navbar() {
             <span className="relative w-8 h-8">
               <Image
                 src="/logo.png"
-                alt="The Ethical Engineer Logo"
+                alt="ethical-engineering Logo"
                 fill
                 className="object-contain drop-shadow"
                 priority
                 sizes="32px"
               />
             </span>
-            <span>The Ethical Engineer</span>
+            <span>ethical-engineering</span>
           </Link>
 
           {/* Desktop Navigation */}

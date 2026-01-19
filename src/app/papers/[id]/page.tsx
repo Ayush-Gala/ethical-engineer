@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PaperPageProps) {
   }
 
   return {
-    title: `${paper.title} | The Ethical Engineer`,
+    title: `${paper.title} | ethical-engineering`,
   };
 }
 

@@ -9,7 +9,7 @@ export default function AboutTEE() {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
-          About The Ethical Engineer
+          About the ethical-engineering blog
         </h1>
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           A platform dedicated to preserving and promoting ethical software engineering principles in the age of AI
@@ -24,7 +24,7 @@ export default function AboutTEE() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
               With the rapid rise of AI and automation, we&apos;re witnessing a concerning trend: the erosion of fundamental software engineering principles. 
-              The Ethical Engineer exists to combat this by providing insights, case studies, and practical guidance that empowers developers to make 
+              The ethical-engineering blog exists to combat this by providing insights, case studies, and practical guidance that empowers developers to make 
               better decisions when building software solutions for the world.
             </p>
           </div>
