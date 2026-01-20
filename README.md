@@ -1,4 +1,4 @@
-# The Ethical Engineer
+# ethical-engineering
 
 A modern, responsive portfolio blog website built with Next.js, React, and Tailwind CSS. This platform showcases ethical engineering practices, sustainable software development, and responsible technology insights.
 

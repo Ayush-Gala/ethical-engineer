@@ -1,4 +1,4 @@
-# Deployment Guide - The Ethical Engineer Blog
+# Deployment Guide - ethical-engineering Blog
 
 This guide will walk you through deploying your blog to Vercel.
 

@@ -1,6 +1,6 @@
-# 🚀 Installation Guide - The Ethical Engineer
+# 🚀 Installation Guide - ethical-engineering
 
-A comprehensive guide to set up and run "The Ethical Engineer" portfolio blog website locally from scratch.
+A comprehensive guide to set up and run this portfolio blog website locally from scratch.
 
 ## 📋 Prerequisites
 
@@ -116,7 +116,7 @@ npm run dev
 
 1. **Open your web browser**
 2. **Navigate to**: [http://localhost:3000](http://localhost:3000)
-3. **You should see**: The Ethical Engineer homepage with blog posts
+3. **You should see**: ethical-engineering homepage with blog posts
 
 ### Available Scripts
 
@@ -277,7 +277,7 @@ If you encounter issues not covered in this guide:
 
 ## 🎉 Success!
 
-You've successfully set up "The Ethical Engineer" portfolio blog! The application should now be running at [http://localhost:3000](http://localhost:3000) with full dark mode support, responsive design, and all features working correctly.
+You've successfully set up this portfolio/blog! The application should now be running at [http://localhost:3000](http://localhost:3000) with full dark mode support, responsive design, and all features working correctly.
 
 ---
 
