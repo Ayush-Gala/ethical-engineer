@@ -1,0 +1,2 @@
+1. Add logos of universities to education section besides the text.
+2. Add logos of companies in the work section.

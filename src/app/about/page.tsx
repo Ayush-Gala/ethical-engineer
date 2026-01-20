@@ -42,14 +42,17 @@ export default function About() {
           <div className="flex items-center gap-2 mb-2">
             <FaQuoteLeft className="text-blue-500 dark:text-blue-400 text-xl" />
             <span className="text-gray-800 dark:text-gray-200 text-lg font-medium">
-              &ldquo;Technology is most powerful when it is responsible and accessible.&rdquo;
+              &ldquo;Performance matters when systems operate at scale.&rdquo;
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
-            My journey began with a curiosity for how things work and a drive to solve real-world problems. I focus on building scalable, efficient, and reliable software systems. My curiosity lies at the intersection of software engineering, AI, and sustainable computing. I believe that maintainable infrastructure and thoughtful design can reduce energy use, drive long-term value, and create a positive impact.
+            My journey began with a curiosity for how things work and a drive to solve real-world problems. My work is driven by a deep interest in how large-scale systems behave under real constraints: latency, throughput, fault tolerance, and resource efficiency. I focus on building high-performance, distributed, and cloud-native systems that are scalable, reliable, and engineered with rigor.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
+            My background spans parallel programming, distributed systems, and systems-level software, with hands-on experience across HPC clusters, cloud infrastructure, and performance-critical workloads. I’m particularly drawn to problems involving efficient resource utilization, system observability, and resilient architectures, where careful design and low-level understanding make a measurable difference.
           </p>
           <p className="text-gray-700 dark:text-gray-300">
-            I&apos;m passionate about distributed systems, high-performance computing, and backend development. My goal is to engineer solutions that are robust, ethical, and future-ready. I&apos;m always learning, always building.
+            I believe well-designed infrastructure is as much about correctness and performance as it is about sustainability and long-term maintainability. My goal is to work on systems that operate reliably at scale, push hardware and software to their limits, and form the backbone of real-world, mission-critical applications.
           </p>
         </div>
       </div>
@@ -75,13 +78,13 @@ export default function About() {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <div>
                 <span className="font-semibold text-lg text-gray-900 dark:text-white">NC State University</span>
-                <span className="ml-2 text-blue-600 dark:text-blue-400 font-medium">(MS, Computer Science, 2024–2026)</span>
+                <span className="ml-2 text-blue-600 dark:text-blue-400 font-medium">(Master of Computer Science, 2024–2026)</span>
                 <span className="ml-2 text-xs bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-2 py-0.5 rounded">GPA: 4.0</span>
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">Top 1% in Graduate Division</div>
             </div>
             <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
-              <span className="font-medium">Relevant Courses:</span> Parallel Systems, Architecture of Parallel Computers, Software Engineering, Operating Systems, Automated Learning & Data Analysis, Neural Networks
+              <span className="font-medium">Relevant Courses:</span> Advanced Distributed Systems, Parallel Systems, Operating Systems, Cloud Computing, Software Engineering, Architecture of Parallel Computers, Neural Networks, etc.
             </div>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
