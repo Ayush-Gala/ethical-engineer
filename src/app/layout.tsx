@@ -7,8 +7,8 @@ import ClientThemeProvider from "@/components/ClientThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "The Ethical Engineer",
-  description: "Personal portfolio and blog of The Ethical Engineer",
+  title: "ethical-engineering",
+  description: "Personal portfolio and blog",
 };
 
 export default function RootLayout({
